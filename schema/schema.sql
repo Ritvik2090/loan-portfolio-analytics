@@ -84,14 +84,27 @@ CREATE TABLE payments (
     id INT PRIMARY KEY,
     loan_id INT NOT NULL,
     emi_id INT NOT NULL,
-    payment_amount DECIMAL(12,2) NOT NULL,
+    payment_event_id NOT NULL,
     principal_paid DECIMAL(12,2) NOT NULL,
     interest_paid DECIMAL(12,2) NOT NULL,
-    payment_date TIMESTAMP NOT NULL,
-    payment_mode VARCHAR(20),
     created_at TIMESTAMP NOT NULL,
     updated_at TIMESTAMP NOT NULL,
 
     FOREIGN KEY (loan_id) REFERENCES loans(id),
-    FOREIGN KEY (emi_id) REFERENCES emis(id)
+    FOREIGN KEY (emi_id) REFERENCES emis(id),
+    FOREIGN KEY (payment_event_id) REFERENCES payment_event(id)
 );
+
+-- ====================
+-- Payment Events Table
+-- ====================
+
+CREATE TABLE payment_event (
+    id INT PRIMARY KEY,
+    paid_amount DECIMAL(12,2) NOT NULL,
+    payment_date TIMESTAMP NOT NULL,
+    payment_mode VARCHAR(20),
+    created_at TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP NOT NULL,
+);
+    
