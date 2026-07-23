@@ -1,9 +1,0 @@
-id,product_name,interest_rate,processing_fee_percent,min_loan_amount,max_loan_amount,max_tenure_months,prepayment_allowed,is_active,created_at,updated_at
-1,Personal Loan,18.0,2.0,10000,500000,24,True,0,2023-01-01,2024-01-01
-2,Personal Loan,20.0,2.0,10000,500000,24,True,1,2024-01-01,2024-01-01
-3,Gold Loan,12.0,1.0,5000,300000,12,True,1,2024-01-01,2024-01-01
-4,Business Loan,16.0,2.5,50000,1000000,36,True,1,2024-01-01,2024-01-01
-5,Education Loan,11.0,1.0,50000,1000000,60,False,1,2024-01-01,2024-01-01
-6,Consumer Durable Loan,22.0,3.0,5000,100000,18,True,1,2024-01-01,2024-01-01
-7,Medical Loan,15.0,1.5,10000,500000,36,True,1,2024-01-01,2024-01-01
-8,Travel Loan,19.0,2.0,10000,300000,24,True,1,2024-01-01,2024-01-01
